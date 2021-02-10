@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css"
 </head>
 <body>
+    
     <section>
         <div class="circle"></div>
         <header>
@@ -22,19 +23,42 @@
 
         </li>
     </ul>
+
+
+ <!-- Trigger/Open The Modal -->
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+       
+      <p id="rcorners1">"Lo"Lorem ipsum dolor sit amet in culpa qui officia deserunt mollit anim id est laboruLo"Lorem ipsum dolor sit amet in culpa qui officia deserunt mollit anim id est laLo"Lorem ipsum dolor sit amet in culpa qui officia deserunt mollit anim id est lam." </p>
+      <span class="close">&times;</span>
+      
+    </div>
+
+</div>
+
+
+
         </header>
+        
+        
         <div class="content">
             <div class="textBox">
                 
                 <h2>its not just a coffee its <span>Starbucks</span></h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
-                     <a href="#">Learn More</a>
+                     <!-- <a href="#">Learn More</a> -->
+                     <button class="somestyle" id="myBtn">Open Modal</button>
             </div>
             <div class="imgBox">
-                <img src="img1.png" class="starbucks">
+                <img src="img1.png" width="100%" height="100%"  class="starbucks">
                 
             </div>
         </div>
+        
         <ul class="thumb">
             <li><img src="thumb1.png" onclick="imgSlider('img1.png');changeCircleColor('#017143')"</li>
             <li><img src="thumb2.png" onclick="imgSlider('img2.png');changeCircleColor('#eb7495')"</li>
@@ -50,8 +74,39 @@
         </ul>
 
         </ul>
+        
     </section>
     <script type="text/javascript">
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+
     function imgSlider(anything){
         document.querySelector('.starbucks').src = anything;
     }

@@ -6,6 +6,77 @@
     box-sizing: border-box;
     font-family: 'poppins',sans-serif;
 }
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 300px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 100px;
+    border-radius: 15px;
+    
+  }
+  .modal-content p{
+      /* justify-content:flex-start; */
+      text-align:left;
+  }
+  
+
+ 
+    
+  
+
+
+  .imgBox { 
+  
+    /* overflow: hidden;  */
+    margin: 0 auto; 
+} 
+   
+.imgBox img { 
+   
+    transition: 0.5s all ease-in-out; 
+} 
+   
+.imgBox:hover img { 
+    transform: scale(1.5); 
+} 
+    
+   
+ 
+  
+
+  
+  /* The Close Button */
+  .close {
+    
+      float: initial
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
 section{
     position: relative;
@@ -86,7 +157,7 @@ header ul li a{
     
 }
 
-.content .textBox a{
+button{
     display: inline-block;
     margin-top: 20px;
     padding: 8px 20px;
